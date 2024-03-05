@@ -89,14 +89,14 @@ export const ContentDiv = styled.div`
   flex-shrink: 0;
   margin-top: 16px;
 
-  & > p {
+  & p {
     height: 110px;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     color: var(--gray600);
-    font-family: ${({ $font }) => $font || 'inherit'};
+    font-family: ${({ $font }) => $font};
     font-size: 18px;
     font-style: normal;
     font-weight: 400;

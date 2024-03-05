@@ -143,7 +143,6 @@ export const ContentDiv = styled.div`
     display: -webkit-box;
     overflow-y: scroll;
     color: var(--gray600);
-    font-family: Pretendard;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -167,6 +166,10 @@ export const ContentDiv = styled.div`
       width: 90%;
       height: auto;
     }
+  }
+
+  & p {
+    font-family: ${({ $font }) => $font};
   }
 
   & > .date {
