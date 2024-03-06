@@ -107,9 +107,10 @@ function RollingPageHeader({
 
       if (window.Kakao) {
         const kakao = window.Kakao;
-
+        console.log(kakao);
         if (!kakao.isInitialized()) {
           kakao.init(process.env.REACT_APP_KAKAO_KEY);
+          console.log(process.env.REACT_APP_KAKAO_KEY);
         }
 
         kakao.Link.sendDefault({
