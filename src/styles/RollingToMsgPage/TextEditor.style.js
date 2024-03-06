@@ -19,6 +19,7 @@ export const StyledQuillEditor = styled(ReactQuill)`
   .ql-container {
     border: 0.2rem solid var(--gray300);
     border-radius: 0 0 0.8rem 0.8rem;
+    background-color: var(--white, #fff);
   }
 `;
 

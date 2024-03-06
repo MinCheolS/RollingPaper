@@ -2,7 +2,10 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import Emoticon from './Emoticon';
 // import emojiList from '../../../constants/EmojiList';
-import { EmoticonDetaiDiv, EmoticonsDiv } from './RollingHeader.style';
+import {
+  EmoticonDetaiDiv,
+  EmoticonsDiv,
+} from '../../../styles/RollingPage/RollingHeader.style';
 
 export default function EmoticonDetail({ isVisible, emojilist }) {
   return (

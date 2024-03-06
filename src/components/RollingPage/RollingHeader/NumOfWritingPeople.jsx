@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProfileFrame from './ProfileFrame';
-import { NumOfWritingPeopleDiv, EclipseDiv } from './RollingHeader.style';
+import {
+  NumOfWritingPeopleDiv,
+  EclipseDiv,
+} from '../../../styles/RollingPage/RollingHeader.style';
 
 export default function NumOfWritingPeople({ messageCount, threePeople }) {
   return (

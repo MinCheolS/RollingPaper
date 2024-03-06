@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const LinkButton = styled(Link)`
+export const LinkButton = styled(Link)`
   display: inline-block;
   width: 100%;
   width: 280px;
@@ -12,7 +12,7 @@ const LinkButton = styled(Link)`
   background: var(--purple600, #9935ff);
   color: var(--white, #fff);
   font-size: var(--font18, 1.8rem);
-  font-weight: var(--blod, 700);
+  font-weight: var(--bold, 700);
   line-height: 28px;
   letter-spacing: -0.18px;
   &:hover {
@@ -29,4 +29,4 @@ const LinkButton = styled(Link)`
   }
 `;
 
-export default LinkButton;
+export const etc = styled.div``;

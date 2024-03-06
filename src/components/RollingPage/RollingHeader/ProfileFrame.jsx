@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import senderProfileImage from '../../../assets/images/senderProfileImage.png';
-import { ProfileFrameDiv, NumberP } from './RollingHeader.style';
+import {
+  ProfileFrameDiv,
+  NumberP,
+} from '../../../styles/RollingPage/RollingHeader.style';
 
 function ProfileFrame({ type, left, number, profileImgURL }) {
   return (

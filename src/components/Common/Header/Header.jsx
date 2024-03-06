@@ -6,7 +6,7 @@ import {
   HeaderButton,
   HeaderLogoLink,
   UserH1,
-} from './Header.style';
+} from '../../../styles/Common/Header.style';
 import LogoIcon from '../../../assets/icons/logo.svg';
 
 function Header({ name }) {

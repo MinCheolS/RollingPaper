@@ -8,11 +8,10 @@ import Fonts from '../components/RollingToMsgPage/Fonts';
 import Text from '../components/RollingToMsgPage/Text';
 import {
   FormContentDiv,
-  HeaderContentDiv,
   MsgPageContainerDiv,
   MsgPageForm,
   SubmitBtn,
-} from '../styles/RollingToMsgPage.style';
+} from '../styles/RollingToMsgPage/RollingToMsgPage.style';
 import useOutsideClose from '../hooks/useOutsideClose';
 import Header from '../components/Common/Header/Header';
 
@@ -73,9 +72,7 @@ function RollingToMsgPage() {
   }, []);
   return (
     <MsgPageContainerDiv>
-      <HeaderContentDiv>
-        <Header />
-      </HeaderContentDiv>
+      <Header />
       <FormContentDiv>
         <MsgPageForm onSubmit={onSubmitHandle}>
           <InputName

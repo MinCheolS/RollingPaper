@@ -9,7 +9,7 @@ import {
   BadgeDiv,
   ContentDiv,
   CheckButton,
-} from './DetailCard.style';
+} from '../../styles/RollingPage/DetailCard.style';
 
 function DetailCard({ $visible, onClick = null, card }) {
   const { font } = card;

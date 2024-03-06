@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import Select from './Select';
-import { relationshList } from './SelectList';
+import { relationshList } from '../../utils/SelectList';
 import { RelationshipContentDiv } from '../../styles/RollingToMsgPage/Relationship.style';
 
 const Relationship = forwardRef(

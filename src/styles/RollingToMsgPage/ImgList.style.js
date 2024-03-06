@@ -25,7 +25,7 @@ export const ImgListDiv = styled.div`
   gap: 1.2rem;
 
   & > span {
-    color: var(--gray500);
+    color: ${({ theme }) => theme.subText};
     font-size: var(--font16);
     font-weight: var(--regular);
     line-height: 1.625;

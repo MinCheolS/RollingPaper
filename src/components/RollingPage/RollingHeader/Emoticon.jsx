@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { EmoticonFrameDiv, EmoticonSpan } from './RollingHeader.style';
+import {
+  EmoticonFrameDiv,
+  EmoticonSpan,
+} from '../../../styles/RollingPage/RollingHeader.style';
 
 export default function Emoticon({ emoticon, count }) {
   return (

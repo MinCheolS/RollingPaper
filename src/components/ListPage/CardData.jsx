@@ -9,7 +9,7 @@ import {
   CardRecipientDiv,
   CardRecipientWrapperDiv,
   CardWrapperLink,
-} from './CardData.style';
+} from '../../styles/ListPage/CardData.style';
 
 function CardData({ cardData, translateX }) {
   const commentImg = cardData.map((data) => data.recentMessages);
@@ -35,7 +35,7 @@ function CardData({ cardData, translateX }) {
                   />
                 ))}
 
-                {commentImg[index].length > 3 && (
+                {commentImg[index].length >= 3 && (
                   <div className="commentImg">+ {list.messageCount - 3}</div>
                 )}
               </CardCommentImgBoxDiv>

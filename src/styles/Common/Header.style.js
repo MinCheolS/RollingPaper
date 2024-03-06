@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const ContainerHeader = styled.header`
-  border-bottom: 1px solid #ededed;
-  background-color: var(--white);
+  border-bottom: 1px solid ${({ theme }) => theme.borderBottom};
+  background-color: ${({ theme }) => theme.bgColor};
 
   @media all and (max-width: 1248px) {
     padding: 0 24px;
@@ -26,7 +26,7 @@ export const HeaderLogoLink = styled(Link)`
   gap: 8px;
 
   & > h1 {
-    color: #4a494f;
+    color: ${({ theme }) => theme.text};
     font-family: Poppins;
     font-size: 19.971px;
     font-weight: 700;

@@ -8,24 +8,24 @@ import Emoticon from './Emoticon';
 import EmoticonDetail from './EmoticonDetail';
 import NumOfWritingPeople from './NumOfWritingPeople';
 import {
-  MainContainerHeader,
-  UserH1,
-  DividerDiv,
-  EmoticonDiv,
-  BestEmoticonDiv,
-  EmoticonDetailButton,
-  AddEmotionButton,
-  ShareButton,
-  ShareOptionDiv,
-  ShareOptionBtn,
-} from './RollingHeader.style';
-import {
   getReactionData,
   postReactionData,
   getUserInfo,
 } from '../../../apis/api';
 import useOutsideClose from '../../../hooks/useOutsideClose';
-import { ShareList } from './ShareList';
+import { ShareList } from '../../../utils/ShareList';
+import {
+  AddEmotionButton,
+  BestEmoticonDiv,
+  DividerDiv,
+  EmoticonDetailButton,
+  EmoticonDiv,
+  MainContainerHeader,
+  ShareButton,
+  ShareOptionBtn,
+  ShareOptionDiv,
+  UserH1,
+} from '../../../styles/RollingPage/RollingHeader.style';
 
 function RollingPageHeader({
   name,

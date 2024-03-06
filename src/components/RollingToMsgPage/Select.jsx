@@ -7,7 +7,7 @@ import {
   SelectOptionBtn,
   SelectSpan,
 } from '../../styles/RollingToMsgPage/Select.style';
-import { fontsList } from './SelectList';
+import { fontsList } from '../../utils/SelectList';
 
 const Select = forwardRef(
   ({ SelectList, isOpen, setIsOpen, value, onChange }, ref) => {

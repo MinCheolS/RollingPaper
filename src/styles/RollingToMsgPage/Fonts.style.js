@@ -18,7 +18,7 @@ export const FontsContentDiv = styled.div`
   }
 
   & > span {
-    color: var(--gray900);
+    color: ${({ theme }) => theme.text};
     font-size: var(--font24);
     font-weight: var(--bold);
     line-height: 1.5;

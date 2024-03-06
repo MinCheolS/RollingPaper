@@ -7,9 +7,8 @@ export const ContainerDiv = styled.div`
   padding: 24px;
   flex-shrink: 0;
   border-radius: 16px;
-  background: var(--white);
+  background: ${({ theme }) => theme.btnBgColor};
   box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.08);
-  transition: all 0.2s linear;
 
   @media (max-width: 800px) {
     padding: 2vw;
@@ -86,10 +85,11 @@ export const SenderInfoDiv = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-
+    color: ${({ theme }) => theme.text};
     @media (max-width: 930px) {
       font-size: 2vw;
     }
+
     @media (max-width: 768px) {
       font-size: 3vw;
     }
@@ -137,8 +137,9 @@ export const ContentDiv = styled.div`
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    color: var(--gray600);
+    color: ${({ theme }) => theme.subText};
     font-family: ${({ $font }) => $font};
+
     font-size: 18px;
     font-style: normal;
     font-weight: 400;

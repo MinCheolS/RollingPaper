@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import Select from './Select';
-import { fontsList } from './SelectList';
+import { fontsList } from '../../utils/SelectList';
 import { FontsContentDiv } from '../../styles/RollingToMsgPage/Fonts.style';
 
 const Fonts = forwardRef(

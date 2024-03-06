@@ -13,7 +13,7 @@ export const CardContainerSection = styled.section`
   padding: ${({ $even }) => ($even ? '60px 192px 60px 0' : '60px 0 60px 60px')};
   gap: ${({ $even }) => ($even ? '0px' : '152px')};
   border-radius: 16px;
-  background: var(--surface, #f6f8ff);
+  background-color: ${({ theme }) => theme.landingCard};
   .LandingImg {
     height: 204px;
     object-fit: none;
@@ -48,14 +48,14 @@ export const CardDescDiv = styled.div`
   flex-direction: column;
   gap: 8px;
   .Title {
-    color: var(--gray900, #181818);
+    color: ${({ theme }) => theme.text};
     font-size: var(--font24, 2.4rem);
     font-weight: var(--bold, 700);
     line-height: 36px;
     letter-spacing: -0.24px;
   }
   .Description {
-    color: var(--gray500, #555);
+    color: ${({ theme }) => theme.subText};
     font-size: var(--font18, 1.8rem);
     font-weight: var(--regular, 700);
     line-height: 28px;

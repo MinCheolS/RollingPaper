@@ -7,14 +7,9 @@ export const MsgPageContainerDiv = styled.div`
   flex-direction: column;
 `;
 
-export const HeaderContentDiv = styled.div`
-  @media (max-width: 360px) {
-    display: none;
-  }
-`;
-
 export const FormContentDiv = styled.div`
   padding: 0 2.4rem;
+  background-color: ${({ theme }) => theme.bgColor};
 
   @media (max-width: 360px) {
     padding: 0 2rem;

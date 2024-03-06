@@ -1,14 +1,17 @@
 import styled from 'styled-components';
+import { getBgColor } from '../../utils/BgItem';
 
 export const ContainerDiv = styled.div`
   width: 100vw;
   height: 100vh;
   margin: 0px;
   overflow: auto;
-  background-image: url(${({ $bgImg }) => $bgImg});
+  background-image: ${({ $bgImg, theme }) =>
+    theme.mode === 'light' ? `url(${$bgImg})` : theme.bgColor};
   background-repeat: no-repeat;
   background-position: center;
-  background-color: ${({ $bgColor }) => $bgColor};
+  background-color: ${({ $bgColor, theme }) =>
+    theme.mode === 'light' ? getBgColor($bgColor) : theme.bgColor};
   & > .Div {
     padding-top: 114px;
     width: 1200px;
