@@ -8,7 +8,12 @@ import AddCard from '../components/RollingPage/AddCard';
 import Header from '../components/Common/Header/Header';
 import RollingPageHeader from '../components/RollingPage/RollingHeader/RollingPageHeader';
 import Toast from '../components/Common/Toast';
-import { deleteMsgData, getCardData, getUserInfo } from '../apis/api';
+import {
+  deleteMsgData,
+  getCardData,
+  getUserInfo,
+  getReactionData,
+} from '../apis/api';
 import {
   ContainerDiv,
   EditBtn,
@@ -28,20 +33,27 @@ function RollingPage() {
   const [deleteMsgId, setDeleteMsgId] = useState('');
   const [deleteMsgIdArr, setDeleteMsgIdArr] = useState([]);
   const [nextCard, setNextCard] = useState(null);
+  const [sendToHeaderData, setSendToHeaderData] = useState({});
 
   const fetchDataForRollingPage = async () => {
     try {
       setLoading(true);
-      const [messages, useInfo] = await Promise.all([
+      const [messages, useInfo, reactionList] = await Promise.all([
         getCardData(id),
         getUserInfo(id),
+        getReactionData(id),
       ]);
 
-      const newCardList = messages.results;
-
-      setUserInfo(useInfo);
+      const newCardList = messages.results; // 무한 스크롤을 위한 변수 선언
       setCardlist(newCardList);
       setNextCard(messages.next);
+
+      setUserInfo(useInfo);
+      setSendToHeaderData({
+        // 헤더에 보내줄 데이터
+        reactionList: reactionList.results,
+        topReactions: useInfo.topReactions,
+      });
 
       setBackgroundColor(useInfo.backgroundColor);
       setBackgroundImage(useInfo.backgroundImageURL);
@@ -161,6 +173,7 @@ function RollingPage() {
             messageCount={userInfo.messageCount}
             cardList={cardlist}
             setIsSharedToastVisible={setIsSharedToastVisible}
+            getFromRollingData={sendToHeaderData}
           />
           <div className="Div">
             {cardlist[0] && (

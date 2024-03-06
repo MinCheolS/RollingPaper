@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import EmojiPicker from 'emoji-picker-react';
 import { ReactComponent as Arrow } from '../../../assets/icons/arrowDown.svg';
@@ -33,6 +33,7 @@ function RollingPageHeader({
   messageCount,
   cardList,
   setIsSharedToastVisible,
+  getFromRollingData,
 }) {
   const [isEmojiPickerVisible, setIsEmojiPickerVsiible] = useState(false);
   const [isEmoticonDetailVisible, setIsEmotionDetailVisible] = useState(false);
@@ -40,28 +41,10 @@ function RollingPageHeader({
   const [userReactionList, setUserReactionList] = useState([]);
   const [topReactions, setTopReactions] = useState([]);
 
-  // 유저의 받은 이모티콘 리스트 가져오기
-  const fetchData = useCallback(async () => {
-    try {
-      const [newReactionList, userInfo] = await Promise.all([
-        getReactionData(id),
-        getUserInfo(id),
-      ]);
-
-      setUserReactionList(newReactionList.results);
-      setTopReactions(userInfo.topReactions);
-    } catch (error) {
-      // 오류 처리
-      console.error(error);
-    }
-  }, [id]);
-
   useEffect(() => {
-    const fetchDataAndSetState = async () => {
-      await fetchData();
-    };
-    fetchDataAndSetState();
-  }, [fetchData, id]);
+    setTopReactions(getFromRollingData.topReactions);
+    setUserReactionList(getFromRollingData.reactionList);
+  }, []);
 
   // 새롭게 이모티콘 생성 시 POST 요청 후, 다시 GET 요청으로 리스트 변경
   const onEmojiPickerHandle = async (emojiData) => {
@@ -79,7 +62,6 @@ function RollingPageHeader({
     setUserReactionList(newReactionList);
     setTopReactions(newTopReactions);
   };
-  // const [emojiSortedList, setEmojiSortedList] = useState([]);
   const emojiPickerRef = useRef(null);
   const emojiDetailRef = useRef(null);
   const shareRef = useRef(null);
@@ -223,6 +205,22 @@ RollingPageHeader.propTypes = {
       profileImageURL: PropTypes.string,
     }),
   ),
+  getFromRollingData: PropTypes.shape({
+    reactionList: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number,
+        emoji: PropTypes.string,
+        count: PropTypes.number,
+      }),
+    ),
+    topReactions: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number,
+        emoji: PropTypes.string,
+        count: PropTypes.number,
+      }),
+    ),
+  }),
   setIsSharedToastVisible: PropTypes.func,
 };
 
@@ -232,6 +230,7 @@ RollingPageHeader.defaultProps = {
   messageCount: 0,
   cardList: [],
   setIsSharedToastVisible: null,
+  getFromRollingData: {},
 };
 
 export default RollingPageHeader;
