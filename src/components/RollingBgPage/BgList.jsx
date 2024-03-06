@@ -63,7 +63,7 @@ const BgListWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   margin-bottom: 69px;
-  @media (min-width: 360px) and (max-width: 768px) {
+  @media (min-width: 360px) and (max-width: 767px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;

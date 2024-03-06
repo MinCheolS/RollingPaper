@@ -22,7 +22,7 @@ function Header({ name }) {
   return (
     <ContainerHeader>
       <div className="HeaderContainer">
-        {screenSize <= 368 && name ? (
+        {screenSize <= 360 && name ? (
           <UserH1>To. {name}</UserH1>
         ) : (
           <HeaderLogoLink to="/">

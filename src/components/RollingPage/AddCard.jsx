@@ -23,7 +23,8 @@ AddCard.defaultProps = {
 
 const AddCardDiv = styled.div`
   width: 100%;
-  height: 280px;
+  min-height: 280px;
+  height: 100%;
   padding: 0px 24px;
   border-radius: 16px;
   background: var(--white);

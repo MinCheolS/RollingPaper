@@ -44,7 +44,11 @@ export const CardsListsDiv = styled.div`
     gap: 16px;
   }
 
-  @media (max-width: 368px) {
+  @media (max-width: 58px) {
+    gap: 16px;
+  }
+
+  @media (max-width: 360px) {
     width: auto;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);

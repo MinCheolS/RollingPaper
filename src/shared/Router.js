@@ -12,9 +12,11 @@ function Router() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/list" element={<ListPage />} />
-        <Route path="/post/:id" element={<RollingPage />} />
-        <Route path="/post" element={<RollingToBgPage />} />
-        <Route path="/post/:id/message" element={<RollingToMsgPage />} />
+        <Route path="/post">
+          <Route index element={<RollingToBgPage />} />
+          <Route path=":id" element={<RollingPage />} />
+          <Route path=":id/message" element={<RollingToMsgPage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

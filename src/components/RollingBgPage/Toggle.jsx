@@ -48,7 +48,7 @@ export default Toggle;
 const TotalWrapper = styled.div`
   width: 100%;
   margin-bottom: 45px;
-  @media (min-width: 360px) and (max-width: 768px) {
+  @media (min-width: 360px) and (max-width: 767px) {
     margin-bottom: 28px;
   }
 `;

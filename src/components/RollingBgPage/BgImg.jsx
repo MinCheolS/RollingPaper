@@ -40,7 +40,7 @@ const BgItemWrapper = styled.div`
   position: relative;
   width: 168px;
   height: 168px;
-  @media (min-width: 360px) and (max-width: 768px) {
+  @media (min-width: 360px) and (max-width: 767px) {
     width: 154px;
     height: 154px;
   }

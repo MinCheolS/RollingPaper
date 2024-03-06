@@ -6,7 +6,7 @@ import { StyledQuillEditor } from '../../styles/RollingToMsgPage/TextEditor.styl
 function TextEditor({ quillValue, onChange }) {
   const modules = {
     toolbar: [
-      // [{ header: [1, 2, false] }],
+      [{ header: [1, 2, false] }],
       ['bold', 'italic', 'underline', 'strike', 'blockquote'],
       [
         { list: 'ordered' },

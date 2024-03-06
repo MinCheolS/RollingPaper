@@ -11,6 +11,19 @@ export const ContainerDiv = styled.div`
   box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.08);
   transition: all 0.2s linear;
 
+  @media (max-width: 800px) {
+    padding: 2vw;
+  }
+  @media (max-width: 768px) {
+    padding: 3vw;
+  }
+  @media (max-width: 430px) {
+    padding: 3vw;
+  }
+  @media (max-width: 360px) {
+    padding: 24px;
+  }
+
   &:hover {
     cursor: pointer;
     width: 100%;
@@ -23,6 +36,10 @@ export const SenderFrameDiv = styled.div`
   flex-direction: row;
   gap: 14px;
   margin-top: 4px;
+
+  @media (max-width: 768px) {
+    gap: 8px;
+  }
 `;
 
 export const ProfileImageDiv = styled.button`
@@ -35,6 +52,21 @@ export const ProfileImageDiv = styled.button`
   border-radius: 100px;
   border: 1px solid var(--gray200);
   background: var(--white);
+
+  @media (max-width: 900px) {
+    width: 45px;
+    height: 45px;
+  }
+
+  @media (max-width: 430px) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (max-width: 360px) {
+    width: 56px;
+    height: 56px;
+  }
 
   & > img {
     width: 108px;
@@ -55,6 +87,9 @@ export const SenderInfoDiv = styled.div`
     font-weight: 400;
     line-height: 24px;
 
+    @media (max-width: 930px) {
+      font-size: 2vw;
+    }
     @media (max-width: 768px) {
       font-size: 3vw;
     }
@@ -81,6 +116,13 @@ export const BadgeDiv = styled.div`
   font-weight: 400;
   line-height: 20px; /* 142.857% */
   letter-spacing: -0.07px;
+
+  @media (max-width: 400px) {
+    font-size: 10px;
+  }
+  @media (max-width: 360px) {
+    font-size: 14px;
+  }
 `;
 
 export const ContentDiv = styled.div`
@@ -90,7 +132,7 @@ export const ContentDiv = styled.div`
   margin-top: 16px;
 
   & p {
-    height: 110px;
+    height: 120px;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
@@ -105,11 +147,15 @@ export const ContentDiv = styled.div`
     margin-bottom: 16px;
 
     @media (max-width: 768px) {
-      height: 80px;
+      height: 130px;
       -webkit-line-clamp: 3;
     }
+    @media (max-width: 500px) {
+      font-size: 14px;
+    }
+
     @media (max-width: 360px) {
-      height: 56px;
+      height: 150px;
       -webkit-line-clamp: 2;
       font-size: 15px;
     }
@@ -141,4 +187,21 @@ export const DeleteIconBtn = styled.button`
   border: 1px solid var(--gray300);
   background: var(--white);
   margin-left: auto;
+
+  @media (max-width: 900px) {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+  }
+  @media (max-width: 500px) {
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+    margin-left: auto;
+  }
+  @media (max-width: 360px) {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
 `;

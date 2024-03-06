@@ -19,12 +19,7 @@ function CardData({ cardData, translateX }) {
       {cardData.map((list, index) => (
         <article key={list.id}>
           <CardWrapperLink
-            // to={`/post/${list.id}`}
             to={`/post/${list.id}`}
-            state={{
-              bgColor: list.backgroundColor,
-              bgImg: list.backgroundImageURL,
-            }}
             $bgColor={list.backgroundColor}
             $bgImg={list.backgroundImageURL}
           >
