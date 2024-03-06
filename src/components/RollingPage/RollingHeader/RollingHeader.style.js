@@ -89,7 +89,6 @@ export const EmoticonDetailButton = styled.button`
     width: 30px;
   }
 
-
   & > svg :hover {
     background-color: var(--gray200);
   }
