@@ -8,6 +8,7 @@ export const ContainerDiv = styled.div`
   overflow: auto;
   background-image: ${({ $bgImg, theme }) =>
     theme.mode === 'light' ? `url(${$bgImg})` : theme.bgColor};
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: ${({ $bgColor, theme }) =>
