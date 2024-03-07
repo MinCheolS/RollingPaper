@@ -7,7 +7,7 @@ export const ContainerDiv = styled.div`
   padding: 24px;
   flex-shrink: 0;
   border-radius: 16px;
-  background: ${({ theme }) => theme.btnBgColor};
+  background: ${({ theme }) => theme.buttonColor};
   box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.08);
 
   @media (max-width: 800px) {
