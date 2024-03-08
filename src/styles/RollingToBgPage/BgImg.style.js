@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Skeleton from 'react-loading-skeleton';
 
 export const BgItemWrapper = styled.div`
   position: relative;
@@ -34,4 +35,12 @@ export const SelectedLayer = styled.div`
     width: 44px;
     height: 44px;
   }
+`;
+
+export const BgImgWrapperSkeleton = styled(Skeleton)`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 `;

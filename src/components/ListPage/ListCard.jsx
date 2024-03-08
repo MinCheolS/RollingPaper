@@ -7,9 +7,11 @@ import {
   NextButton,
   PrevButton,
 } from '../../styles/ListPage/ListCard.style';
+import { getRecipients } from '../../apis/api';
 
 function ListCard() {
-  const [cardData, setCardData] = useState({ popular: [], recent: [] });
+  const [popularData, setPopularData] = useState([]);
+  const [recentData, setRecentData] = useState([]);
   const [popularScroll, setPopularScroll] = useState(0);
   const [recentScroll, setRecentScroll] = useState(0);
   const [popularLength, setPopularLength] = useState(0);
@@ -17,22 +19,21 @@ function ListCard() {
   const CARD_WIDTH = 295;
 
   useEffect(() => {
-    Promise.all([
-      fetch('https://rolling-api.vercel.app/4-3/recipients/?sort=like'),
-      fetch('https://rolling-api.vercel.app/4-3/recipients/'),
-    ]).then(([popularRes, recentRes]) =>
-      Promise.all([popularRes.json(), recentRes.json()]).then(
-        ([popularData, recentData]) => {
-          setCardData({
-            popular: popularData.results,
-            recent: recentData.results,
-          });
-          setPopularLength(popularData.results.length);
-          setRecentLength(recentData.results.length);
-        },
-      ),
-    );
+    getRecipients(100).then(({ results }) => {
+      const sortedPopularData = results.sort(
+        (a, b) => b.reactionCount - a.reactionCount,
+      );
+      setPopularData(sortedPopularData.slice(0, 8));
+      setPopularLength(sortedPopularData.slice(0, 8).length);
+
+      const sortedRecentData = results.sort(
+        (a, b) => a.reactionCount - b.reactionCount,
+      );
+      setRecentData(sortedRecentData.slice(0, 8));
+      setRecentLength(sortedRecentData.slice(0, 8).length);
+    });
   }, []);
+
   const onPopularPrevClickHandle = () => {
     setPopularScroll(popularScroll - CARD_WIDTH);
     setPopularLength(popularLength + 1);
@@ -59,7 +60,7 @@ function ListCard() {
             <PrevButton onClick={onPopularPrevClickHandle} />
           ) : null}
           <CardList>
-            <CardData cardData={cardData.popular} translateX={popularScroll} />
+            <CardData cardData={popularData} translateX={popularScroll} />
           </CardList>
           {popularLength > 4 ? (
             <NextButton onClick={onPopularNextClickHandle} />
@@ -74,7 +75,7 @@ function ListCard() {
             <PrevButton onClick={onRecentPrevClickHandle} />
           ) : null}
           <CardList>
-            <CardData cardData={cardData.recent} translateX={recentScroll} />
+            <CardData cardData={recentData} translateX={recentScroll} />
           </CardList>
           {recentLength > 4 ? (
             <NextButton onClick={onRecentNextClickHandle} />

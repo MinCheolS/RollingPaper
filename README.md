@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# <img src="https://rolling-paper-team3.vercel.app/static/media/logo.b0eb23b848f6b7067a8e7055071719d7.svg"> 프로젝트 소개
+```javascript
+로그인 없이 다른 사람들의 롤링페이퍼에 메시지와 이모티콘을 남길 수 있고, 자기만의 롤링페이퍼를 만들어 다른사람에게 공유할 수 있는 서비스
+```
+<table>
+  <tbody>
+    <tr>
+      <td>개발 기간</td>
+      <td>2024.02.26 ~ 2024.03.08</td>
+    </tr>
+    <tr>
+      <td>URL</td>
+      <td>https://rolling-paper-team3.vercel.app/</td>
+    </tr>
+  </tbody>
+</table>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
 
-## Available Scripts
+# <img src="https://rolling-paper-team3.vercel.app/static/media/logo.b0eb23b848f6b7067a8e7055071719d7.svg"> 사용 기술 스택
+<table>
+  <tbody>
+    <tr>
+      <tr>
+        <td><p>Library</p></td>
+        <td><img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> </td>
+      </tr>
+      <tr>
+        <td><p>Programming Language</p></td>
+        <td><img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></td>
+      </tr>
+      <tr>
+        <td><p>Styling</p></td>
+        <td><img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/></td>
+      </tr>
+      <tr>
+        <td><p>Version Control</p></td>
+        <td><img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"> <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></td>
+      </tr>
+      <tr>
+        <td><p>Design</p></td>
+        <td><img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"></td>
+      </tr>
+      <tr>
+        <td><p>Communication</p></td>
+        <td><img src="https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white"></td>
+      </tr>          
+    </tr>
+  </tbody>
+</table>
 
-In the project directory, you can run:
+<br />
 
-### `npm start`
+# <img src="https://rolling-paper-team3.vercel.app/static/media/logo.b0eb23b848f6b7067a8e7055071719d7.svg"> 주요 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# <img src="https://rolling-paper-team3.vercel.app/static/media/logo.b0eb23b848f6b7067a8e7055071719d7.svg"> 트러블 슈팅
 
-### `npm test`
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# <img src="https://rolling-paper-team3.vercel.app/static/media/logo.b0eb23b848f6b7067a8e7055071719d7.svg"> 프론트엔드 팀원 소개
+<table>
+  <tbody>
+    <tr>
+      <tr>
+        <th colspan="2">이름</th>
+        <th width="250">담당</th>
+        <th width="300">Github</th>
+      </tr>
+      <tr>
+        <td align="center"><p>🚩신민철</p></td>
+        <td><img src="https://avatars.githubusercontent.com/u/97032929?v=4" width=100 height=100> </td>
+        <td align="center">
+          롤링 페이퍼 메세지 페이지 <br />
+          카카오톡 공유하기
+        </td>
+        <td>https://github.com/MinCheolS</td>
+      </tr>
+      <tr>
+        <td align="center"><p>김민정</p></td>
+        <td><img src="https://avatars.githubusercontent.com/u/110798291?v=4" width=100 height=100> </td>
+        <td align="center">
+          롤링 페이퍼 페이지 <br />
+          상세페이지 <br />
+          모달 <br />
+          링크 공유하기
+        </td>
+        <td>https://github.com/minjeong9919</td>
+      </tr>
+      <tr>
+        <td align="center"><p>이진우</p></td>
+        <td><img src="https://avatars.githubusercontent.com/u/33426203?v=4" width=100 height=100> </td>
+        <td align="center">
+          롤링 페이퍼 생성 페이지 <br />
+          스켈레톤 UI
+        </td>
+        <td>https://github.com/yeeZinu</td>
+      </tr>
+      <tr>
+        <td align="center"><p>황준용</p></td>
+        <td><img src="https://avatars.githubusercontent.com/u/107796704?v=4" width=100 height=100> </td>
+        <td align="center">
+          랜딩 페이지 <br />
+          롤링 페이퍼 리스트 페이지 <br />
+          Toast <br />
+          스켈레톤 UI
+        </td>
+        <td>https://github.com/hsmurf</td>
+      </tr>
+    </tr>
+  </tbody>
+</table>

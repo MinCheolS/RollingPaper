@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MsgPageContainerDiv = styled.div`
-  max-width: 192rem;
+  /* max-width: 192rem; */
   width: 100%;
   display: flex;
   flex-direction: column;

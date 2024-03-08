@@ -34,6 +34,7 @@ export const ToastBoxDiv = styled.div`
   opacity: ${({ $showToast }) => ($showToast ? '1' : '0')};
   transform: translateY(${({ $showToast }) => ($showToast ? '-70px' : '0px')});
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.25, 1.35);
+  z-index: 9999;
   &::before {
     content: '';
     position: absolute;

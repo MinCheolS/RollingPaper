@@ -48,6 +48,7 @@ export const CardRecipientWrapperDiv = styled.div`
   padding: 16px;
   @media all and (max-width: 768px) {
     height: 100px;
+    padding: 10px;
   }
 `;
 
@@ -96,6 +97,10 @@ export const CardCommentImgBoxDiv = styled.div`
       font-weight: var(--regular, 400);
       line-height: 18px;
       letter-spacing: -0.06px;
+    }
+    @media all and (max-width: 768px) {
+      width: 24px;
+      height: 24px;
     }
   }
 `;

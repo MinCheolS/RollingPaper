@@ -1,7 +1,7 @@
 const BASE_URL = `https://rolling-api.vercel.app`;
 
-export const getRecipients = async () => {
-  const response = await fetch(`${BASE_URL}/4-3/recipients/`);
+export const getRecipients = async (limit = 8) => {
+  const response = await fetch(`${BASE_URL}/4-3/recipients/?limit=${limit}`);
   const result = response.json();
   return result;
 };

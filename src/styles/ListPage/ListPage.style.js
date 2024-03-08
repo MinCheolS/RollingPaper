@@ -18,5 +18,6 @@ export const Wrapper = styled.div`
   padding: 0 24px;
   @media all and (max-width: 1248px) {
     overflow: hidden;
+    gap: 24px;
   }
 `;

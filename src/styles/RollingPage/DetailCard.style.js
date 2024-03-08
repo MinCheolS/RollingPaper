@@ -37,7 +37,7 @@ export const ContainerDiv = styled.div`
   padding: 40px;
   flex-shrink: 0;
   border-radius: 16px;
-  background: var(--white);
+  background: ${({ theme }) => theme.buttonColor};
   box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
@@ -101,7 +101,7 @@ export const SenderInfoDiv = styled.div`
   gap: 6px;
 
   & > div > span {
-    color: #000;
+    color: ${({ theme }) => theme.text};
     font-family: Pretendard;
     font-size: 20px;
     font-style: normal;
@@ -142,7 +142,7 @@ export const ContentDiv = styled.div`
     height: 240px;
     display: -webkit-box;
     overflow-y: scroll;
-    color: var(--gray600);
+    color: ${({ theme }) => theme.subText};
     font-size: 18px;
     font-style: normal;
     font-weight: 400;

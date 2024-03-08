@@ -5,7 +5,7 @@ import Header from '../components/Common/Header/Header';
 import { Container, Wrapper } from '../styles/LandingPage/LandingPage.style';
 import { LinkButton } from '../styles/LandingPage/LinkButton.style';
 
-function LandingPage({ theme = 'light' }) {
+function LandingPage({ theme }) {
   return (
     <>
       <Header />
@@ -19,7 +19,7 @@ function LandingPage({ theme = 'light' }) {
   );
 }
 LandingPage.propTypes = {
-  theme: PropTypes.string.isRequired,
+  theme: PropTypes.bool.isRequired,
 };
 
 export default LandingPage;
